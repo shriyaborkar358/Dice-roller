@@ -42,6 +42,20 @@
             cursor: pointer;
         }
 
+        @keyframes roll {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        .animate {
+            animation: roll 1s infinite;
+        }
+
     </style>
 </head>
 
@@ -55,6 +69,51 @@
         <button class="btn-roll" onclick="roll()">Roll Dice</button>
 
     </div>
+
+    <script>
+        function roll() {
+            const min = 1;
+            const max = 6;
+
+            const randomNumber = Math.round(Math.random() * (max - min)) + min;
+
+            const imgElement = document.getElementById('dice-img');
+            switch (randomNumber) {
+
+                case 1:
+                    imgElement.src = 'one.png';
+                    break;
+
+                case 2:
+                    imgElement.src = 'two.png';
+                    break;
+
+                case 3:
+                    imgElement.src = 'three.png';
+                    break;
+
+                case 4:
+                    imgElement.src = 'four.png';
+                    break;
+
+                case 5:
+                    imgElement.src = 'five.png';
+                    break;
+
+                case 6:
+                    imgElement.src = 'six.png';
+                    break;
+
+                default:
+                    imgElement.src = 'default.png';
+            }
+            imgElement.classList.add("animate");
+            setTimeout(() => {
+                imgElement.classList.remove("animate")
+            }, 1000);
+        }
+
+    </script>
 
 </body>
 
