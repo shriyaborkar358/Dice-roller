@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        body{
+            background-image: linear-gradient( 184.1deg,  rgba(249,255,182,1) 44.7%, rgba(226,255,172,1) 67.2% );
+            min-height: 90vh;
+        }
+
+        .container{
+            margin: 70px auto;
+            padding: 50px;
+        }
+
+        .dice-img{
+            width: 200px;
+            height: 200px;
+            display: block;
+            margin: 20px auto;
+        }
+
+        .application-title{
+            text-align: center;
+            font-size: 50px;
+            color: crimson;
+        }
+
+        .btn-roll{
+            width: 200px;
+            background-image: radial-gradient( circle farthest-corner at 10% 20%,  rgba(100,43,115,1) 0%, rgba(4,0,4,1) 90% );
+            display: block;
+            font-size: 30px;
+            margin: 20px auto;
+            padding: 5px 20px;
+            border-radius: 10px;
+            border: none;
+            color: #ffff;
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h1 class="application-title">Roll The Dice</h1>
+
+        <img src="default.png" alt="dice" class="dice-img" id="dice-img" />
+
+        <button class="btn-roll" onclick="roll()">Roll Dice</button>
+
+    </div>
+
+</body>
+
+</html>
